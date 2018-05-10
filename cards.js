@@ -1,7 +1,8 @@
-const createDeck = () => {
-  const suits = ['\u2664', '\u2665', '\u2666', '\u2663'];
-  const ranks = ['a', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-  return [].concat(...ranks.map((card) => suits.map((suit) => `${card}${suit}`)));
+const createDeck = () => { //creating Object which contains the Suits / Facevalue(ranks) to create a deck
+  const suits = ['\u2664', '\u2665', '\u2666', '\u2663']; //unicode characters for the suit symbols. I thought about doing this!
+  const ranks = ['a', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']; // I did the same here
+  return [].concat(...ranks.map((card) => suits.map((suit) => `${card}${suit}`))); 
+  // ES2016 format, return empty array, then concatenate the Ranks and Suits to make a Card. 
 }
 
 const shuffle = (deck) => {
